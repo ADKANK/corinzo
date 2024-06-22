@@ -1,0 +1,41 @@
+<app-page-info pageInfo="Magnificent things are very simple."
+  pageDescription="The best combination of modernity & simplicity"></app-page-info>
+<div class="container">
+  <div class="greet">
+    <h1 class="h1">We Would Love to hear from you</h1>
+    <p class="p1">Any questions or Remark? Just Write to Us?</p>
+  </div>
+  <div class="form-container">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-message">
+        <h3 class="h3">Get in Touch</h3>
+        <p class="p1" style="color: black;">Tell us how we can help you </p>
+      </div>
+      <div class="form-group">
+        <input type="text" id="name" formControlName="name" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" formControlName="email" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <input type="tel" id="mobile" formControlName="mobile" placeholder="Mobile Number">
+      </div>
+      <div class="form-group">
+        <textarea id="details" formControlName="details" rows="4" placeholder="Details"></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger" [disabled]="contactForm.invalid">Submit Your Response</button>
+      <div class="contact-group">
+        <app-contact-icon imgPath="assets/phone_icon.png"
+          description="Tell us how we can help you in details, so we can help answer them more effectively"></app-contact-icon>
+        <app-contact-icon imgPath="assets/mail_icon.png"
+          description="Tell us how we can help you in details, so we can help answer them more effectively"></app-contact-icon>
+        <app-contact-icon imgPath="assets/support_icon.png"
+          description="Tell us how we can help you in details, so we can help answer them more effectively"></app-contact-icon>
+      </div>
+      <div class="map">
+        <img src="assets/map.png" alt="map" width="100%">
+      </div>
+    </form>
+  </div>
+
+</div>
