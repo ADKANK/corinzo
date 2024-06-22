@@ -1,0 +1,164 @@
+.h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #F35B58;
+    line-height: 7.25rem;
+}
+
+.p2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.375rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #39302A;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 5%;
+}
+
+.content-container {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+
+
+}
+
+.image-container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 400px;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.corinzo-image-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* for mobile */
+@media (max-width: 480px) {
+
+
+    img {
+        max-width: 100%;
+        height: 20em;
+    }
+
+    .h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+    }
+
+    .p2 {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+
+    .image-container {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+
+    }
+
+    .content-container {
+        order: 1;
+    }
+
+    .list-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-right: 5%;
+    }
+
+    .summary-container {
+        justify-content: end;
+    }
+
+    .corinzo-image-container {
+        flex-direction: column;
+    }
+
+    .description-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:481px) and (max-width:1024px) {
+
+    img {
+        max-width: 100%;
+        height: 30em;
+    }
+
+    .h2 {
+        font-size: 1.5rem;
+        line-height: 1.953rem;
+
+    }
+
+    .p2 {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    .image-container {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        max-width: unset;
+    }
+
+    .content-container {
+        order: 1;
+    }
+
+    .list-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .corinzo-image-container {
+        flex-direction: column;
+    }
+
+    .description-container {
+        flex-direction: column;
+    }
+}

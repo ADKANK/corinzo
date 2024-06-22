@@ -1,0 +1,72 @@
+.content-container {
+    background-image: url("../../../assets/about.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 31.25rem;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.page-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 3.5rem;
+}
+
+.p1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.75;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+
+@media (min-width:481px) and (max-width: 1024px) {
+
+    .h1 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .p1 {
+        font-size: 0.5rem;
+        line-height: 1.225rem;
+    }
+
+    .content-container {
+        height: 12rem;
+    }
+
+}
+
+@media (max-width:480px) {
+
+    .h1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .p1 {
+        font-size: 0.5rem;
+        line-height: 1.225rem;
+    }
+
+    .content-container {
+        height: 12rem;
+    }
+
+}

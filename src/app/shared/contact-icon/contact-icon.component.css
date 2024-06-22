@@ -1,0 +1,15 @@
+.col {
+    padding: 5%;
+    border: 1px solid #39302A1A;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:480px) {
+    .col {
+        border: unset;
+    }
+}

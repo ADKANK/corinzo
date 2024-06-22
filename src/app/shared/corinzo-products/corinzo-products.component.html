@@ -1,0 +1,16 @@
+<div class="product-container">
+    <div class="product-image-container">
+        <img src={{imgPath}} />
+    </div>
+    <div class="product-details">
+        <div class="product-title">
+            <h1 class="h1">{{title}}</h1>
+        </div>
+        <div class="product-features">
+            <ul class="list-container" style="list-style-type:disc;">
+                <li *ngFor="let feature of features" class="p1">{{feature}}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="railing-container">
+    <div class="railing-image">
+        <img class="img" src={{imgPath}} />
+    </div>
+    <div class="railing-description">
+        <h1 class="h1">{{title}}</h1>
+        <div class="row">
+            <div class="col">
+                <p class="p2">Features</p>
+                <div class="product-details">
+                    <ul class="list-container" style="list-style-type:disc;">
+                        <li *ngFor="let feature of features" class="p1">{{feature}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <p class="p2">Specification</p>
+                <div class="product-details">
+                    <ul class="list-container" style="list-style-type:disc;">
+                        <li *ngFor="let specs of specification" class="p1">{{specs}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="p2">Glass</p>
+                <div class="product-details">
+                    <ul class="list-container" style="list-style-type:disc;">
+                        <li *ngFor="let glass of glasses" class="p1">{{glass}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <p class="p2">Availiable Finish</p>
+                <div class="product-details">
+                    <ul class="list-container" style="list-style-type:disc;">
+                        <li *ngFor="let fin of finish" class="p1">{{fin}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>

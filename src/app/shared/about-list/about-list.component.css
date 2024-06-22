@@ -1,0 +1,54 @@
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-container ul li {
+
+    margin-bottom: 10%;
+}
+
+.li1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    color: #39302A;
+}
+
+ul {
+    max-width: 500px;
+}
+
+
+@media (min-width:481px) and (max-width: 1024px) {
+
+    .list-container {
+        justify-content: flex-start;
+    }
+
+    .list-container ul li {
+        margin-bottom: 2%;
+    }
+
+    .li1 {
+        font-size: 1.5rem;
+        line-height: 1.4rem;
+    }
+}
+
+@media (max-width:480px) {
+
+
+    .li1 {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    ul {
+        padding: 0 5%;
+        min-width: 200px;
+    }
+}
