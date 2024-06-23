@@ -1,26 +1,51 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="../../../assets/corinzo.svg" class="d-inline-block align-text-top" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
-            style="background-color: aliceblue;">
-            <span class="navbar-toggler-icon"></span>
+        <div class="navbar-logo-container">
+            <a class="navbar-brand" href="#">
+                <img src="../../../assets/corinzo.svg" class="d-inline-block align-text-top" />
+            </a>
+        </div>
+        <button class="navbar-toggler ml-auto" type="button" (click)="toggleNavbar()" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-expanded="false" aria-controls="navbarNavAltMarkup"
+            aria-label="Toggle navigation">
+            <span *ngIf="!isNavbarCollapsed; else closeIcon" class="navbar-toggler-icon" style="align-self: self-end;">
+            </span>
+            <ng-template #closeIcon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x icon-large"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 1 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </ng-template>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" aria-current="page" href="#" (click)="navigateToHome()">Home</a>
-                <a class="nav-link" (click)="navigateToAbout()">About</a>
-                <a class="nav-link" (click)="navigateToProjects()">Projects</a>
-                <a class="nav-link" (click)="navigateToRailings()">Products</a>
-                <a class="nav-link" (click)="navigateToBrochures()">Brochures</a>
-                <a class="nav-link" (click)="navigateToContact()">Contact Us</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" (hidden)="closeNavbar()">
+            <ul class="navbar-nav me-auto">
+                <a class="nav-link" aria-current="page" [routerLink]="['/home']" routerLinkActive="active"
+                    (click)="closeNavbar()">Home</a>
+                <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active"
+                    (click)="closeNavbar()">About</a>
+                <a class="nav-link" [routerLink]="['/projects']" routerLinkActive="active"
+                    (click)="closeNavbar()">Projects</a>
+                <div class="dropdown" style="margin-right: 10% ;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1B1D20;">
+                        <a class="dropdown-item" style="color: white;" [routerLink]="['/products']"
+                            routerLinkActive="active">Windows and
+                            Doors</a>
+                        <a class="dropdown-item" style="color: white;" [routerLink]="['/railings']"
+                            routerLinkActive="active">Railings
+                            and Hardwares</a>
+                    </div>
+                </div>
+                <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active"
+                    (click)="closeNavbar()">Contact Us</a>
+            </ul>
+            <div class="navbar-nav-2">
                 <button class="btn btn-sm btn-outline-secondary" id="btn1" type="submit">Get
                     Started</button>
-            </div>
-            <div class="navbar-nav">
-
             </div>
         </div>
     </div>

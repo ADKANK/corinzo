@@ -3,8 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 101px;
-    border: 1px;
+    margin-left: 5%;
 }
 
 .navbar {
@@ -14,8 +13,8 @@
 }
 
 .container-fluid {
-    padding-left: 10%;
-    padding-right: 20%;
+    padding-left: 8%;
+    padding-right: 5%;
     background-color: #1B1D20;
 }
 
@@ -25,9 +24,11 @@
     font-family: 'REM', sans-serif;
     font-weight: 400;
     line-height: 18px;
-    width: 18dvh;
+    width: 50%;
     font-size: 1rem;
 }
+
+
 
 #btn1 {
     margin-left: 5%;
@@ -38,14 +39,23 @@ a {
     cursor: pointer;
 }
 
+
 @media (max-width:480px) {
     .navbar-brand {
-        width: 50%;
+        width: 10%;
     }
 
-    .nabar-nav {
-        display: flex;
-        justify-content: start;
+    .navbar-logo-container {
+        width: 30%
+    }
+
+    .icon-large {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
     img {
@@ -53,8 +63,13 @@ a {
     }
 
     .collapse {
-        margin-bottom: 20%;
+        margin-top: 2%;
+        margin-bottom: 10%;
+    }
 
+    .navbar-nav-2 {
+        margin-top: 2%;
+        margin-left: 4%;
     }
 
     #btn1 {
@@ -64,13 +79,35 @@ a {
 
     .nav-link {
         width: unset;
+    }
+
+    .navbar-nav {
+        align-items: unset;
     }
 }
 
 
 @media (min-width:481px) and (max-width:1200px) {
     .navbar-brand {
-        width: 50%;
+        width: 20%;
+    }
+
+    .navbar-logo-container {
+        width: 30%
+    }
+
+    .navbar-nav-2 {
+        margin-top: 2%;
+        margin-left: 4%;
+    }
+
+    .icon-large {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
     img {
@@ -78,7 +115,8 @@ a {
     }
 
     .collapse {
-        margin-bottom: 10%;
+        margin-top: 2%;
+        margin-bottom: 5%;
     }
 
     #btn1 {
@@ -88,6 +126,10 @@ a {
 
     .nav-link {
         width: unset;
+    }
+
+    .navbar-nav {
+        align-items: unset;
     }
 
 }
